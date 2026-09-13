@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate and download an ARDO Awareness Run 2026 participation certificate.">
+  <title>ARDO E-Certificate 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="card" aria-labelledby="page-title">
+      <header class="brand">
+        <img src="assets/ardo-logo.png" alt="ARDO logo" width="124" height="124">
+        <div>
+          <p class="eyebrow">Certificate Portal</p>
+          <h1 id="page-title">Amaravathi Rare Diseases Organization</h1>
+          <p class="regd">Regd. No.: 32/2019</p>
+        </div>
+      </header>
+
+      <div class="message">
+        <h2>Thank you for participating and supporting the cause.</h2>
+        <p>Enter your details exactly and verify them to generate your official participation certificate.</p>
+      </div>
+
+      <form id="certificate-form" novalidate>
+        <div class="fields">
+          <label>Participant Name<input id="name" name="name" autocomplete="name" maxlength="80" required placeholder="Enter your full name"></label>
+          <label>Ticket ID<input id="ticket" name="ticket" autocomplete="off" maxlength="40" required placeholder="Enter your Ticket ID"></label>
+          <label>Mobile Number<input id="mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel" maxlength="16" required placeholder="Enter registered mobile number"></label>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <div class="actions">
+          <button class="primary" type="submit" id="generate">Generate Certificate</button>
+          <button type="button" id="view" disabled>View Certificate</button>
+          <button type="button" id="download" disabled>Download PDF</button>
+        </div>
+      </form>
+      <p class="privacy">Your entered details are processed only in this browser and are not uploaded or stored.</p>
+    </section>
+
+    <section id="preview-section" class="preview" hidden aria-label="Certificate preview">
+      <iframe id="preview" title="Generated certificate preview"></iframe>
+    </section>
+  </main>
+  <script src="vendor/pdf-lib.min.js"></script>
+  <script src="assets/verification-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

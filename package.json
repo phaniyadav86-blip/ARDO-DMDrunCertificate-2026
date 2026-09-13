@@ -1,0 +1,9 @@
+{
+  "name": "ardo-e-certificate-2026",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "generate-data": "node scripts/generate-verification-data.js",
+    "test": "node tests/verify-data.test.js"
+  }
+}
